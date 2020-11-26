@@ -68,7 +68,7 @@ if __name__ == '__main__':
         sys.exit()
 
     sender_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sender_socket.bind(('0.0.0.0', int(sys.argv[1])))
+    sender_socket.bind(('', int(sys.argv[1])))
     print(socket.gethostbyname(socket.gethostname()))
     FILE_NAME = sys.argv[2]
     packets = AudioPacket(FILE_NAME)

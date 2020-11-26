@@ -9,8 +9,9 @@ MAX_LENGTH = 32774
 packet = Queue()
 listening = True
 
-HOST = "0.0.0.0"
-PORT = int(sys.argv[1])
+TARGET = sys.argv[1].split(':')
+HOST = TARGET[0]
+PORT = int(TARGET[1])
 RATE = int(sys.argv[2]) if len(sys.argv) == 3 else None
 
 RECEIVER_ADDR = (HOST, PORT)
